@@ -1,7 +1,7 @@
 # Hello
-My name is $\mathrm{ZhangJia}$. I use $\mathrm{oyyko}$ as my nickname on the web. 
-I am now a student in $\mathrm{USTC}$ (University of Science and Technology of China).
-I majored in $\mathrm{Computer\  Science}$. I hope to do great work with excellenct people.
+My name is **ZhangJia**. I use **oyyko** as my nickname on the web. 
+I am now a student in **USTC** (University of Science and Technology of China).
+I majored in **Computer Science**. I hope to do great work with excellenct people.
 
 * My blog: blog.oyyko.com
 * My github: github.com/Oyyko
