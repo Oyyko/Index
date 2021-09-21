@@ -1,6 +1,14 @@
 <!DOCTYPE HTML>
-
-<html lang="zh-CN">
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Amamiya Chinatsu's
+ * Date: 2020/6/4
+ * Time: 15:00
+ */
+include_once 'lib/config.php';
+?>
+<html lang="<?php echo $html_lang;?>">
 <!--
 	Re-Edit by Amamiya Chinatsu
 	github.com/BakaChinatsu/uuz-h5theme | @BakaChinatsu
@@ -11,20 +19,20 @@
 -->
 <html>
 	<head>
-		<title>Oyyko</title>
+		<title><?php echo $title; ?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <!-- タグに表示するアイコン -->
-        <link rel="icon" sizes="48x48" type="image/png" href="reimu_48x48_pixiv_28660154.png">
+        <link rel="icon" sizes="48x48" type="image/png" href="<?php echo $tag_icon;?>">
         <!-- ブラウザ要素の色 -->
-        <meta name="theme-color" content="#22849f">
+        <meta name="theme-color" content="<?php echo $theme_color;?>">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style type="text/css">
             body {
                 height: 100%;
                 background-color: #ffffff;
-                background-image: url("images/overlay.png"), url("images/1.jpg");
+                background-image: url("images/overlay.png"), url("images/<?php echo $background_filename;?>");
                 background-repeat: repeat, no-repeat, no-repeat;
                 background-size: 100px 100px, cover, cover;
                 background-position: top left, center center, bottom center;
@@ -64,9 +72,9 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="images/avatar111.jpg" height="130px>" width="130px" alt="" /></span>
-							<h1>Oyyko</h1>
-							<p>喵喵喵</p>
+							<span class="avatar"><img src="images/<?php echo $avatar_filename; ?>" height="<?php echo $avatar_height; ?>>" width="<?php echo $avatar_width; ?>" alt="" /></span>
+							<h1><?php echo $main_title;?></h1>
+							<p><?php echo $sec_title;?></p>
 						</header>
 						<!--
 						<hr />
@@ -107,20 +115,20 @@
 						-->
 						<footer>
 							<ul class="icons">
-								<li><a href="t.me/oyyko" class="icon brands fa-telegram-plane" target="_blank">telegram</a></li>
-								<li><a href="https://github.com/Oyyko/" class="icon brands fa-github" target="_blank">GitHub</a></li>
-                                <li><a href="mailto:finalwind42@gmail.com" class="icon solid fa-envelope" target="_blank">GitHub</a></li>
+								<li><a href="<?php echo $site_url_01;?>" class="icon <?php echo $icon_style_01;?> <?php echo $site_icon_01;?>" target="_blank"><?php echo $site_name_01;?></a></li>
+								<li><a href="<?php echo $site_url_02;?>" class="icon <?php echo $icon_style_02;?> <?php echo $site_icon_02;?>" target="_blank"><?php echo $site_name_02;?></a></li>
+                                <li><a href="<?php echo $site_url_03;?>" class="icon <?php echo $icon_style_03;?> <?php echo $site_icon_03;?>" target="_blank"><?php echo $site_name_02;?></a></li>
 							</ul>
 						</footer>
 						<ul class="actions special">
-								<li><a href="https://blog.oyyko.com" class="button">Blog</a></li>
+								<li><a href="<?php echo $button_url;?>" class="button"><?php echo $button_name;?></a></li>
 							</ul>
 					</section>
 
                     
 				<!-- Footer -->
 					<footer id="footer">
-                            <a>&copy; Oyyko 2019-2021</a>
+                            <a>&copy; <?php echo $copyright; ?></a>
 						<ul class="copyright">
                             <li>Use: <a href="https://github.com/BakaChinatsu/uuz-h5theme">uuz-h5theme</a></li>
 							<li>Powered: <a href="http://html5up.net">HTML5 UP</a></li>
