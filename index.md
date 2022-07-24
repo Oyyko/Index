@@ -8,6 +8,8 @@ I am an undergraduate student from University of Science and Technology of China
 
 Here is my blog: [https://blog.oyyko.com/](https://blog.oyyko.com/)
 
+About the name 'Oyyko': just randomly typed
+
 
 
 

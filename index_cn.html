@@ -201,131 +201,68 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-inline-math-container mjx-container { zoom: 0.95; }
 
 
-@import '';
+/**
+ * NexT for Typora
+ * Brought to you by Bill Chen || https://github.com/BillChen2K/typora-theme-next
+ *
+ * - Want code ligatures for JetBrains Mono?
+ * - Search for `font-variant-ligatures: none;` and comment that line.
+ *
+ * - Want to change the font size in exported pdf?
+ * - Change the variable `--export-font-size` below.
+ **/
+
 :root {
-    --side-bar-bg-color: #fff;
-    --control-text-color: #777;
-    --select-text-bg-color: #ffafa3;
-    --active-file-text-color: #262626;
-    --active-file-border-color: #f22f27;
-    /* --active-file-bg-color: #fff3f0; */
-    --primary-color: #f22f27;
-    /* 中性色 */
-    --mid-1: #ffffff;
-    --mid-2: #fafafa;
-    --mid-3: #f5f5f5;
-    --mid-4: #f0f0f0;
-    --mid-5: #d9d9d9;
-    --mid-6: #bfbfbf;
-    --mid-7: #8c8c8c;
-    --mid-8: #595959;
-    --mid-9: #434343;
-    --mid-10: #262626;
-    --mid-11: #1f1f1f;
-    --mid-12: #141414;
-    --mid-13: #000000;
-    /* 主题色 */
-    --main-1: #fff3f0;
-    --main-2: #ffd4cc;
-    --main-3: #ffafa3;
-    --main-4: #ff887a;
-    --main-5: #ff5d52;
-    --main-6: #f22f27;
-    --main-7: #cc1616;
-    --main-8: #a60a0f;
-    --main-9: #80010a;
-    --main-10: #590009;
+    --base-font-size: 16px;
+    --highlight-color: rgb(0, 160, 160);
+    --text-color: #333;
+    --headings-color: #262a30;
+    --export-font-size: 13px;
+    --select-text-bg-color: #262a30;
+    --select-text-font-color: #eee;
 }
 
-html {
-    font-size: 17px;
+* {
+    /* Disable ligatures */
+    font-variant-ligatures: none;
 }
 
-body {
-    font-family: "Vollkorn", Palatino, Times;
-    /* font-family: 'Source Han SerifCN', Georgia, Times, 'SimSun', serif!important; */
-    color: var(--mid-13);
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.8rem;
-    letter-spacing: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
 
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+html,
+body,
 #write {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 20px 30px 160px;
-}
-
-#write p {
-    line-height: 1.8rem;
-    word-spacing: .05rem;
-    /* color: #3f3f3f; */
-    color: var(--mid-13);
-}
-
-
-/* #write ol li {
-    padding-left: 0.5rem;
-} */
-
-#write>ul:first-child,
-#write>ol:first-child {
-    margin-top: 30px;
-}
-
-body>*:first-child {
-    margin-top: 0 !important;
-}
-
-body>*:last-child {
-    margin-bottom: 0 !important;
-}
-
-
-/* a {
-    color: var(--main-6);
-    font-weight: 500;
-    padding: 0 2px;
-    text-decoration: none;
-} */
-
-a {
-    color: blue;
-    font-weight: 500;
-    padding: 0 2px;
-    text-decoration: none;
-}
-
-
-/* 链接 */
-
-
-/* #write a {
-    border-bottom: 1px solid var(--main-6);
-    color: var(--main-6);
-    text-decoration: none;
-} */
-
-#write a {
-    border-bottom: 1px solid blue;
-    color: blue;
-    text-decoration: none;
-}
-
-
-/* 目录 */
-
-#write a.md-toc-inner {
-    line-height: 1.6;
-    white-space: pre-line;
-    border-bottom: none;
-}
-
-#write a:hover {
-    border-bottom: 2px solid var(--main-6);
-    color: var(--main-7);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    background: #fcfcfc;
+    font-family: Overpass, "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    /* letter-spacing: -0.5px; */
 }
 
 h1,
@@ -334,496 +271,396 @@ h3,
 h4,
 h5,
 h6 {
-    position: relative;
+    color: var(--headings-color);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 20px 0 15px
+}
+
+.CodeMirror pre {
+    font-family: 'JetBrains Mono';
+    font-size: 0.95em;
+    line-height: 1.65em;
+}
+
+#write {
+    max-width: 914px;
+    text-align: justify;
+}
+
+#write>h1:first-child {
+    margin-top: 1.75rem;
+}
+
+#write>h2:first-child {
+    margin-top: 1.5rem;
+}
+
+#write>h3:first-child {
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
 }
 
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-
-h1 tt,
-h1 code {
-    font-size: inherit !important;
-}
-
-h2 tt,
-h2 code {
-    font-size: inherit !important;
-}
-
-h3 tt,
-h3 code {
-    font-size: inherit !important;
-}
-
-h4 tt,
-h4 code {
-    font-size: inherit !important;
-}
-
-h5 tt,
-h5 code {
-    font-size: inherit !important;
-}
-
-h6 tt,
-h6 code {
-    font-size: inherit !important;
-}
-
-h2 a,
-h3 a {
-    color: #34495e;
+#write>h4:first-child {
+    margin-top: 0.5rem;
 }
 
 h1 {
-    text-align: center;
-    padding-bottom: 0.3em;
-    font-size: 2.2em;
-    line-height: 1.2;
-    margin: 2.4em auto 1.2em;
-    color: var(--main-10);
-}
-
-h1:after {
-    content: '';
-    display: block;
-    margin: 0.2em auto 0;
-    width: 100px;
-    height: 2px;
-    border-bottom: 2px solid var(--main-6);
+    font-size: 2.5em
 }
 
 h2 {
-    margin: 2em auto 1.4em;
-    /* padding-left: 10px; */
-    /* display:inline-block; */
-    line-height: 1.4;
-    font-size: 1.8em;
-    /* border-left: 9px solid var(--main-6); */
-    /* border-bottom: 1px solid #ddd; */
-    border-bottom: 1px solid var(--main-6);
-}
-
-h2::before {
-    content: '# '!important;
-    color: #f22f27;
+    font-size: 1.75 em
 }
 
 h3 {
-    font-size: 1.4em;
-    line-height: 1.43;
-    margin: 1.6em auto 1.2em;
-    padding-left: 9px;
-    border-left: 5px solid #f22f27;
-}
-
-
-/* 三级四级标题点击后左边的提示图标 */
-
-#write>h3.md-focus:before,
-#write>h4.md-focus:before {
-    width: auto;
-    height: auto;
-    background-color: var(--main-5);
-    color: var(--mid-1);
+    font-size: 1.45em
 }
 
 h4 {
-    margin-top: 1.3em;
-    font-size: 1.2em;
-    padding-left: 6px;
-    padding-right: 6px;
-    display: inline-block;
-    border: 1px solid var(--main-6);
-    border-top: 4px solid var(--main-6);
+    font-size: 1.25em
 }
 
-#write h5::before,
-#write h6::before {
-    position: absolute;
-    right: calc(100% + .75em);
-    top: 0;
-    color: #5b5b5b;
-    font-size: 0.8rem;
-    font-weight: bold;
-    font-variant: 'small-caps';
-    white-space: nowrap;
-    /* 文本强制不换行 */
-    border: 0;
+h5 {
+    font-size: 1.1em
 }
 
-#write h5 {
-    /* margin-left: 2em; */
-    font-size: 1rem;
+h6 {
+    font-size: 1em;
+    font-weight: bold
 }
 
-#write h6 {
-    /* margin-left: 2.5em; */
-    font-size: 1rem;
+#write code {
+    color: var(--highlight-color);
 }
 
-#write h5::before {
-    content: 'H5';
-    top: 0.18rem;
-}
-
-#write h6::before {
-    content: 'H6';
-    top: 0.18rem;
-}
-
-p,
-blockquote,
-ul,
-ol,
-dl,
-table {
-    margin: 0.8em 0;
-}
-
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
-
-body>h2:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-body>h1:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-body>h1:first-child+h2 {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-body>h3:first-child,
-body>h4:first-child,
-body>h5:first-child,
-body>h6:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-a:first-child h1,
-a:first-child h2,
-a:first-child h3,
-a:first-child h4,
-a:first-child h5,
-a:first-child h6 {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-h1 p,
-h2 p,
-h3 p,
-h4 p,
-h5 p,
-h6 p {
-    margin-top: 0;
-}
-
-#write ol,
-#write ul {
-    padding-left: 25px;
-    margin: .5rem 0;
-}
-
-#write ol>li,
-#write ul>li {
-    color: #db4d52;
-    font-weight: bold;
-}
-
-#write ol>li>*,
-#write ul>li>* {
-    color: #333;
-    font-weight: normal;
-}
-
-#write ol>li>*:not(ol):not(ul),
-#write ul>li>*:not(ol):not(ul) {
-    padding-left: .25rem;
+p {
+    color: var(--text-color);
+    line-height: 1.7rem;
+    margin: 0 0 8px;
 }
 
 #write ul {
-    list-style-type: disc;
+    line-height: 1.75rem;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
 }
 
-blockquote {
-    border-left: 4px solid rgb(239, 112, 96);
-    padding: 10px 15px;
-    color: #3f3f3f;
-    background-color: #fff9f9;
+#write ol li {
+    line-height: 1.75rem;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+}
+
+#write>h3.md-focus:before {
+    left: -1.875rem;
+    top: 0.5rem;
+    padding: 2px;
+}
+
+#write>h4.md-focus:before {
+    left: -1.875rem;
+    top: 0.3125rem;
+    padding: 2px;
+}
+
+#write>h5.md-focus:before {
+    left: -1.875rem;
+    top: 0.25rem;
+    padding: 2px;
+}
+
+#write>h6.md-focus:before {
+    left: -1.875rem;
+    top: .125rem;
+    padding: 2px;
+}
+
+@media screen and (max-width: 48em) {
+    blockquote {
+        margin-left: 1rem;
+        margin-right: 0;
+        padding: 0.5em;
+    }
+    /* .h1,
+    h1 {
+        font-size: 2.827rem;
+    }
+    .h2,
+    h2 {
+        font-size: 1.999rem;
+    }
+    .h3,
+    h3 {
+        font-size: 1.413rem;
+    }
+    .h4,
+    h4 {
+        font-size: 1.250rem;
+    }
+    .h5,
+    h5 {
+        font-size: 1.150rem;
+    }
+    .h6,
+    h6 {
+        font-size: 1rem;
+    } */
+}
+
+a .md-def-url {
+    color: #262a30;
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 table {
-    padding: 0;
-    word-break: initial;
-}
-
-table tr {
-    border-top: 1px solid var(--main-6);
-    margin: 0;
-    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    margin: 0 0 20px;
+    width: 100%;
 }
 
 table tr:nth-child(2n),
 thead {
-    background-color: #fafafa;
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #f5f5f5
+}
+
+caption,
+td,
+th {
+    font-weight: 400;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle
 }
 
 table tr th {
-    font-weight: bold;
-    border: 1px solid var(--main-6);
-    border-bottom: 0;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
+    border-bottom: 3px solid #ddd;
+    font-weight: 700;
+    padding-bottom: 10px;
+    background-color: var(--bg-color);
 }
 
-table tr td {
-    border: 1px solid var(--main-6);
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
+td,
+th {
+    border: 1px solid #ddd;
 }
 
-table tr th:first-child,
-table tr td:first-child {
-    margin-top: 0;
+th {
+    font-weight: 700;
+    padding-bottom: 10px
 }
 
-table tr th:last-child,
-table tr td:last-child {
-    margin-bottom: 0;
-}
-
-#write strong {
-    padding: 0.1em;
-    color: #dc3545;
-}
-
-#write em {
-    padding: 0 2px 0 2px;
-    font-style: normal;
-    color: #ff3502;
-    /* color: #595959;
-    background: #F6EEFF; */
+td {
+    border-bottom-width: 1px
 }
 
 
-/* 数学公式变蓝 */
+/* Inline Code */
 
-[md-inline='inline_math'] {
-    color: blue;
-    font-size: 100%;
-}
-
-
-/* 表格第一行 */
-
-
-/* #write table thead th {
-    background-color: var(--main-7);
-    color: #f8f8f8;
-} */
-
-
-/* 行号左框线 */
-
-#write .CodeMirror-gutters {
-    border-right: 1px solid rgba(204, 51, 0);
-}
-
-
-/* 代码框 */
-
-#write .md-fences {
-    border: 1px solid #7a7a7a;
-    -webkit-font-smoothing: initial;
-    margin: 2rem 0 !important;
-    /* padding: 0.3rem 0 !important; */
-    padding: 3px 5px;
-    line-height: 1.55rem;
-    border-radius: 2px;
-    font-family: 'JetBrains Mono', 'Source Sans Pro', 'Microsoft YaHei', '微软雅黑' !important;
-    font-size: 0.9rem;
-    word-wrap: normal;
-}
-
-#write [mdtype="math_block"] {
-    font-size: 1.2rem;
-}
-
-#write .CodeMirror-wrap .CodeMirror-code pre {
-    padding-left: 12px;
-    line-height: 1.55rem;
-}
-
-.cm-s-inner .CodeMirror-linenumber {
-    width: 2ch !important;
-    color: rgba(128, 128, 255, 0.8);
-}
-
-#write .CodeMirror-cursors .CodeMirror-cursor {
-    border-left: 2px solid var(--main-4);
-}
-
-
-/* 行间代码 */
-
-#write code,
-tt {
+code,
+.md-fences {
+    background: #eee;
+    border-radius: 3px;
+    color: #555;
     padding: 2px 4px;
-    border-radius: 2px;
-    font-family: 'Source Code Pro', Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑' !important;
-    font-size: 0.92rem;
-    color: #ff3502;
-    background-color: #f8f5ec;
-    /* color: #c7254e;
-    background-color: #f9f2f4;  */
-}
-
-tt {
-    margin: 0 2px;
-}
-
-#write .md-footnote {
-    background-color: #f8f8f8;
-    color: #e96900;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'JetBrains Mono';
+    font-size: 0.935em;
 }
 
 
-/* 流程图块 */
+/* Code Blocks */
 
-#write .md-diagram-panel {
-    position: relative;
-    margin: 24px auto;
+.md-fences {
+    margin: 0 0 20px;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 0.4em 1em;
+    padding-top: 0.4em;
 }
 
-#write .md-focus .md-diagram-panel {
-    border: 1px solid var(--main-4);
-    border-radius: 4px;
+.task-list {
+    padding-left: 0;
 }
 
-
-/* heighlight. */
-
-#write mark {
-    background-color: #EBFFEB;
-    border-radius: 2px;
-    padding: 2px 4px;
-    margin: 0 2px;
-    color: #222;
-    font-weight: 500;
+.task-list-item {
+    padding-left: 2rem;
 }
 
-#write del {
-    padding: 1px 2px;
+.task-list-item input {
+    top: 3px;
 }
 
-.cm-s-inner .cm-link,
-.cm-s-inner.cm-link {
-    color: #22a2c9;
+.task-list-item input {
+    outline: none;
+    margin-bottom: 0.5em;
 }
 
-.cm-s-inner .cm-string {
-    color: #22a2c9;
-}
-
-
-/* 任务列表小方框 */
-
-.md-task-list-item>input {
-    margin-left: -1.3em;
-    margin-top: 0.3rem;
-    -webkit-appearance: none;
-}
-
-.md-task-list-item>input:before {
-    content: '';
+.task-list-item input::before {
+    content: "";
     display: inline-block;
-    width: 0.875rem;
-    height: 0.875rem;
+    width: 1rem;
+    height: 1rem;
     vertical-align: middle;
     text-align: center;
-    font-size: 0.8rem;
-    color: var(--mid-1);
-    border-radius: 2px;
-    border: 1px solid var(--main-4);
-    margin-top: -0.4rem;
-    transition: all 0.2s linear;
+    border: 1px solid gray;
+    background-color: #fdfdfd;
+    margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.9rem;
 }
 
-.md-task-list-item>input:checked:before,
-.md-task-list-item>input[checked]:before {
-    content: '\2714';
-    font-size: 0.625rem;
-    color: var(--mid-1);
-    border: 1px solid var(--main-6);
-    background-color: var(--main-6);
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    /*◘*/
+    font-size: 0.8125rem;
+    line-height: 0.9375rem;
+    margin-top: -0.9rem;
 }
 
 
-/* @media print {
-    html {
-        font-size: 13px;
+/* Chrome 29+ */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .task-list-item input:before {
+        margin-top: -0.2rem;
     }
-    table,
-    pre {
-        page-break-inside: avoid;
+    .task-list-item input:checked:before,
+    .task-list-item input[checked]:before {
+        margin-top: -0.2rem;
     }
-    pre {
-        word-wrap: break-word;
-    }
-} */
+}
+
+blockquote {
+    border-left: 4px solid #ddd;
+    color: #666;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 15px
+}
+
+blockquote p {
+    color: #666
+}
+
+blockquote cite::before {
+    content: '-';
+    padding: 0 5px
+}
 
 
-/* .md-fences {
-    background-color: #f8f8f8;
+/* #write pre.md-meta-block {
+    min-height: 30px;
+    background: #f8f8f8;
+    padding: 1.5em;
+    font-weight: 300;
+    font-size: 1em;
+    padding-bottom: 1.5em;
+    padding-top: 3em;
+    margin-top: -1.5em;
+    color: #999;
+    border-left: 1000px #f8f8f8 solid;
+    margin-left: -1000px;
+    border-right: 1000px #f8f8f8 solid;
+    margin-right: -1000px;
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: 'JetBrains Mono';
 } */
 
 #write pre.md-meta-block {
-    /* padding: 1rem; */
+    padding: 1rem;
     font-size: 85%;
     line-height: 1.45;
-    background-color: #f7f7f7;
+    background-color: #f1f1f1;
     border: 0;
     border-radius: 3px;
-    color: #777777;
+    color: hsl(0, 0%, 53%);
     margin-top: 0 !important;
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: 'JetBrains Mono';
+}
+
+.MathJax_Display {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+p.mathjax-block,
+.mathjax-block {
+    padding-bottom: 0;
 }
 
 .mathjax-block>.code-tooltip {
-    bottom: .375rem;
-    /* bottom: .575rem; */
+    bottom: 5px;
+    box-shadow: none;
+}
+
+.md-image>.md-meta {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.md-image>img {
+    margin-top: 2px;
+}
+
+.md-image>.md-meta:first-of-type:before {
+    padding-left: 4px;
+}
+
+#typora-source {
+    color: #555;
+}
+
+
+/** ui for windows **/
+
+#md-searchpanel {
+    border-bottom: 1px solid #ccc;
+}
+
+#md-searchpanel .btn {
+    border: 1px solid #ccc;
+}
+
+#md-notification:before {
+    top: 14px;
+}
+
+#md-notification {
+    background: #eee;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #ccc;
 }
 
 #write>h3.md-focus:before {
@@ -846,29 +683,8 @@ tt {
     top: .285714286rem;
 }
 
-
-/*--- 图片 ---*/
-
-.md-image {
-    margin: 24px auto;
-    border-radius: 4px;
-}
-
-.md-image img {
-    border-radius: 4px;
-}
-
-
-/* 当 “![shadow-随便写]()”写时，会有阴影 */
-
-.md-image img[alt|='shadow'] {
-    /* box-shadow: 0 4px 24px -6px #ddd; */
-    box-shadow: #84A1A8 0px 10px 15px;
-}
-
 .md-image>.md-meta {
     border-radius: 3px;
-    font-family: Consolas, 'Liberation Mono', Courier, monospace;
     padding: 2px 0 0 4px;
     font-size: 0.9em;
     color: inherit;
@@ -880,11 +696,15 @@ tt {
 
 .md-toc {
     margin-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 .sidebar-tabs {
     border-bottom: none;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #efefef;
 }
 
 #typora-quick-open {
@@ -910,20 +730,9 @@ tt {
     border-left-color: rgba(85, 85, 85, 0.12);
 }
 
-header,
-.context-menu,
-.megamenu-content,
-footer {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-}
-
 .file-node-content:hover .file-node-icon,
 .file-node-content:hover .file-node-open-state {
     visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: var(--side-bar-bg-color);
 }
 
 .md-lang {
@@ -931,51 +740,126 @@ footer {
 }
 
 .html-for-mac .context-menu {
-    --item-hover-bg-color: #e6f0fe;
+    --item-hover-bg-color: #E6F0FE;
+}
+
+.file-tree-node {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.file-node-title {
+    padding-top: 2px;
+}
+
+.outline-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+/* 
+.modal-footer .btn-default,
+.modal-footer .btn-primary {
+    border: 2px solid #222;
 }
 
 
-/* 侧边栏 */
 
-.file-list-item.active {
-    background: var(--active-file-bg-color);
-    color: var(--active-file-text-color);
-    border-left: 4px solid var(--main-6);
+#md-searchpanel .btn:not(.close-btn):hover {
+    background: #fff;
+    border-color: #222;
+    color: #222;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
-.file-tree-node.active>.file-node-background {
-    background-color: var(--active-file-bg-color);
-    border-left: 4px solid var(--main-6);
-    border-color: var(--active-file-border-color);
+#md-searchpanel .btn:not(.close-btn) {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition-duration: .2s;
 }
 
-@media print {
-    .typora-export * {
-        -webkit-print-color-adjust: exact;
-    }
-    html {
-        font-size: 16px!important;
-    }
-    body {
-        /* font-family: 'Source Han SerifCN', Georgia, Times, 'SimSun', serif!important; */
-        /* font-size: 16px!important; */
-        font-family: Times, 'SimSun', serif!important;
-        color: #000000!important;
-    }
-    p {
-        color: #000000!important;
-    }
-    a {
-        color: blue!important;
-        /* border-bottom: 1px solid blue!important; */
-    }
-    table,
-    pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
+.searchpanel-search-option-btn {
+    border-radius: 0px;
+    border: 1px solid #222;
+} */
+
+/* Search panel & UI */
+
+#md-searchpanel .btn {
+    border: none;
+}
+
+#md-searchpanel input {
+    box-shadow: none;
+}
+
+.searchpanel-search-option-btn {
+    border-color: #aaa;
+    border-radius: 0;
+}
+
+.modal-dialog .btn {
+    background: #222;
+    border-width: 2px;
+    border-color: #222;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    font-size: .875em;
+    line-height: 2rem;
+    padding: 0 20px;
+    margin: 5px;
+    text-decoration: none;
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out
+}
+
+.modal-dialog .btn:hover {
+    background: #eee;
+    border-color: #222;
+    color: #222;
+}
+
+
+/* Printing issue */
+
+.typora-export * {
+    -webkit-print-color-adjust: exact;
+}
+
+.typora-export p {
+    font-size: var(--export-font-size) !important;
+}
+
+.typora-export li {
+    font-size: var(--export-font-size);
+    line-height: 2rem;
+}
+
+.typora-export #write {
+    font-size: var(--export-font-size) !important;
+}
+
+table,
+pre {
+    page-break-inside: avoid;
+}
+
+pre {
+    word-wrap: break-word;
+}
+
+hr {
+    background-image: repeating-linear-gradient(-45deg, #ddd, #ddd 4px, transparent 4px, transparent 8px);
+    border: 0;
+    height: 3px;
+    margin: 40px 0
 }
 
 
@@ -984,6 +868,6 @@ footer {
 <body class='typora-export'><div class='typora-export-content'>
 <div id='write'  class=''><p><a href='../index'><span>English Version</span></a></p><center>
 Oyyko    
-</center><p><span>你好. 这里是Oyyko.</span></p><p><span>我是一名来自中国科学技术大学的本科生。我主修计算机科学与技术专业。 我热爱计算机科学，对算法设计，计算理论，操作系统和不同的编程语言很感兴趣。我最喜欢的语言是C++，同时我对python，ruby，rust，lisp也熟悉。平时我使用Linux发行版Manjaro作为日常操作系统。</span></p><p><span>这里是我的博客：</span><a href='https://blog.oyyko.com/'><span>https://blog.oyyko.com/</span></a></p><p>&nbsp;</p><p>&nbsp;</p><p><span>联系方式：</span></p><p><span>Email: </span><a href='mailto:jzhang19@mail.ustc.edu.cn' target='_blank' class='url'>jzhang19@mail.ustc.edu.cn</a></p></div></div>
+</center><p><span>你好. 这里是Oyyko.</span></p><p><span>我是一名来自中国科学技术大学的本科生。我主修计算机科学与技术专业。 我热爱计算机科学，对算法设计，计算理论，操作系统和不同的编程语言很感兴趣。我最喜欢的语言是C++，同时我对python，ruby，rust，lisp也熟悉。平时我使用Linux发行版Manjaro作为日常操作系统。</span></p><p><span>这里是我的博客：</span><a href='https://blog.oyyko.com/'><span>https://blog.oyyko.com/</span></a></p><p><span>关于名字&#39;Oyyko&#39;: 只是随手打出来的</span></p><p>&nbsp;</p><p><span>联系方式：</span></p><p><span>Email: </span><a href='mailto:jzhang19@mail.ustc.edu.cn' target='_blank' class='url'>jzhang19@mail.ustc.edu.cn</a></p></div></div>
 </body>
 </html>

@@ -8,7 +8,7 @@ Oyyko
 
 这里是我的博客：[https://blog.oyyko.com/](https://blog.oyyko.com/)
 
-
+关于名字'Oyyko': 只是随手打出来的
 
 
 
