@@ -8,6 +8,8 @@ I am an undergraduate student from University of Science and Technology of China
 
 Here is my blog: [https://blog.oyyko.com/](https://blog.oyyko.com/)
 
+Here is my old blog: http://old_blog.oyyko.com/
+
 About the name 'Oyyko': just randomly typed
 
 
@@ -16,7 +18,7 @@ About the name 'Oyyko': just randomly typed
 
 Contact information:
 
-Email: jzhang19@mail.ustc.edu.cn
+Email: finalwind42@gmail.com
 
 
 

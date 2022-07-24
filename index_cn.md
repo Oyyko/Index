@@ -8,10 +8,13 @@ Oyyko
 
 这里是我的博客：[https://blog.oyyko.com/](https://blog.oyyko.com/)
 
+这里是我的旧博客：http://old_blog.oyyko.com/
+
 关于名字'Oyyko': 只是随手打出来的
 
 
 
 联系方式：
 
-Email: jzhang19@mail.ustc.edu.cn
+Email: finalwind42@gmail.com
+
