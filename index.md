@@ -1,4 +1,3 @@
-[English Version](../index)
 <center>
 Oyyko    
 </center>
